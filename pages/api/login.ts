@@ -19,6 +19,8 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
 
 
     //console.log(req.body)
+
+    //JWT verify
     res.json({
 
         token: jwt.sign(
@@ -27,5 +29,6 @@ export default function (req: NextApiRequest, res: NextApiResponse) {
                 loggedin: username === 'miraz' && password === '1234'
             },KEY)
     })
+    
 }
 
